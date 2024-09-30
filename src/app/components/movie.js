@@ -11,9 +11,10 @@ export default function Movie({title, id, poster_path}) {
   }
   return (
     // { return () } 중에 ----> {return}생략
+    // 자식임
     <div className={styles.movie}>
       <img src={poster_path} alt={title} onClick={onClick} />
-      <Link href={`movies/${id}`}>{title}</Link>
+      <Link prefetch href={`movies/${id}`}>{title}</Link>
     </div>
   )
 }
